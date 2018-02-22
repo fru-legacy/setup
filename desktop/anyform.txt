@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=react-anyform
+Exec=code /home/fru/Dokumente/GitHub/anyform/
+Type=Application
+Icon=/home/fru/install/icons/code.png
+Name[de_DE]=anyform
