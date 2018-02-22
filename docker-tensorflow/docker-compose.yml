@@ -1,0 +1,23 @@
+# nvidia-docker-compose -G
+services:
+  tfpython3:
+    build:
+      context: .
+      args:
+        python: 3
+    ports:
+      - "6006:6006"
+      - "8888:8888"
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    volumes:
+    - nvidia_driver_384.111:/usr/local/nvidia:ro
+    - ~/python3:/src
+    - ~/datasets:/data
+    - ~/.nv/:/home/keras/.nv/
+version: '2'
+volumes:
+  nvidia_driver_384.111:
+    external: true
