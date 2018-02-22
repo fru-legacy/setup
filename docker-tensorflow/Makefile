@@ -18,7 +18,7 @@ run-vae:
 	docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-vae --host 0.0.0.0 & python /src/vae.py"
 
 run-exp1:
-	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python /src/experiments/experiment1.py"
+	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python /src/experiment1.py"
 
 run-exp1-dcgan:
 	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python /src/dcgan/main.py"

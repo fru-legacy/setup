@@ -51,5 +51,5 @@ echo '\n - Equation editor'
 sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
 echo '\n - Add links'
-mv ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
-mv ~/install/desktop/react-multi-tree.txt ~/Schreibtisch/react-multi-tree.desktop
+cp ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
+cp ~/install/desktop/react-multi-tree.txt ~/Schreibtisch/react-multi-tree.desktop

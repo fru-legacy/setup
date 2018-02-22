@@ -1,22 +1,24 @@
-# nvidia-docker-compose -G
+# Recreate with: nvidia-docker-compose -G
+# Initiate volumes with: sudo nvidia-docker run nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+
 services:
   tfpython3:
     build:
-      context: .
       args:
         python: 3
-    ports:
-      - "6006:6006"
-      - "8888:8888"
+      context: .
     devices:
     - /dev/nvidia0
     - /dev/nvidiactl
     - /dev/nvidia-uvm
+    ports:
+    - 6006:6006
+    - 8888:8888
     volumes:
-    - nvidia_driver_384.111:/usr/local/nvidia:ro
     - ~/python3:/src
     - ~/datasets:/data
     - ~/.nv/:/home/keras/.nv/
+    - nvidia_driver_384.111:/usr/local/nvidia:ro
 version: '2'
 volumes:
   nvidia_driver_384.111:
