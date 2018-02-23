@@ -15,7 +15,7 @@ services:
     - 6006:6006
     - 8888:8888
     volumes:
-    - ~/python3:/src
+    - ~/experiments:/src
     - ~/datasets:/data
     - ~/.nv/:/home/keras/.nv/
     - nvidia_driver_384.111:/usr/local/nvidia:ro

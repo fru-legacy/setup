@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=tf-experiments
+Exec=pycharm /home/fru/experiments
+Type=Application
+Icon=/home/fru/install/icons/pycharm.png
+Name[de_DE]=tf-experiments
