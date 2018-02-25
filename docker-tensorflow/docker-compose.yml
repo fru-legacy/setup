@@ -2,7 +2,7 @@
 # Initiate volumes with: sudo nvidia-docker run nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 services:
-  tfpython3:
+  tensorflow-nonroot:
     build:
       context: .
     devices:
