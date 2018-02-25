@@ -4,8 +4,6 @@
 services:
   tfpython3:
     build:
-      args:
-        python: 3
       context: .
     devices:
     - /dev/nvidia0

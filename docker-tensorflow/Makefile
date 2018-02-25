@@ -18,7 +18,7 @@ run-vae:
 	docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-vae --host 0.0.0.0 & python /src/vae.py"
 
 run-exp1:
-	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python /src/experiment1.py"
+	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python3 /src/structure.py"
 
 run-exp1-dcgan:
 	rm -rf ~/python3/log-exp1 && docker-compose run --service-ports $(SERVICE) bash -c "tensorboard --logdir /src/log-exp1 --host 0.0.0.0 --reload_interval 2 & python /src/dcgan/main.py"
@@ -31,3 +31,6 @@ notebook: build
 
 test: build
 	$(DOCKER) run -it -v $(SRC):/src/workspace -v $(DATA):/data --env KERAS_BACKEND=$(BACKEND) keras py.test $(TEST)
+
+cleanup:
+    docker rmi $(docker images -a --filter=dangling=true -q) & docker rm $(docker ps --filter=status=exited --filter=status=created -q)
