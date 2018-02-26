@@ -15,7 +15,9 @@ services:
     volumes:
     - ~/experiments:/src
     - ~/datasets:/data
-    - ~/.nv/:/home/keras/.nv/
+    - ~/datasets:/home/fru/.keras/datasets
+    - ~/datasets:/tmp/.keras/datasets
+    - ~/.nv/:/home/fru/.nv/
     - nvidia_driver_384.111:/usr/local/nvidia:ro
 version: '2'
 volumes:
