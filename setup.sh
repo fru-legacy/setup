@@ -50,6 +50,9 @@ sudo rm -rf inkscape-android-export
 echo '\n - Equation editor'
 sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
+echo '\n - Other'
+sudo apt-get install p7zip
+
 echo '\n - Add links'
 cp ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
 cp ~/install/desktop/experiments.txt ~/Schreibtisch/experiments.desktop
