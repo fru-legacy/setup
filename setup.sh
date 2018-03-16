@@ -57,3 +57,17 @@ echo '\n - Add links'
 cp ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
 cp ~/install/desktop/experiments.txt ~/Schreibtisch/experiments.desktop
 cp ~/install/desktop/react-multi-tree.txt ~/Schreibtisch/react-multi-tree.desktop
+
+echo '\n - Publish to pip'
+pipconfig="[distutils]
+index-servers=
+  pypi
+
+[pypi]
+repository: https://upload.pypi.org/legacy/
+username=fru
+password=long_password
+"
+echo "$pipconfig" > ~/.pypirc
+sudo apt-get install twine
+
