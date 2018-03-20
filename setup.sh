@@ -57,6 +57,7 @@ echo '\n - Add links'
 cp ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
 cp ~/install/desktop/experiments.txt ~/Schreibtisch/experiments.desktop
 cp ~/install/desktop/react-multi-tree.txt ~/Schreibtisch/react-multi-tree.desktop
+cp ~/install/desktop/tensorboard.txt ~/Schreibtisch/tensorboard.desktop
 
 echo '\n - Publish to pip'
 pipconfig="[distutils]

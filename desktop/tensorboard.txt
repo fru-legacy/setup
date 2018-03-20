@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=tensorboard
+Exec=gnome-terminal -e "make -C ~/experiments/docker/ tensorboard"
+Type=Application
+Icon=/home/fru/install/icons/tensorflow.png
+Name[de_DE]=tensorboard
