@@ -39,6 +39,12 @@ sudo usermod -a -G docker $USER
 echo '\n - Install node js'
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
+sudo apt-get remove -y nodejs  # This leaves npm behind
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n lts
+sudo npm install -g npm
+# On error remove folder /usr/local/n
 
 echo '\n - Install inkscape and extensions'
 sudo apt-get install inkscape
@@ -54,9 +60,8 @@ echo '\n - Other'
 sudo apt-get install p7zip
 
 echo '\n - Add links'
-cp ~/install/desktop/anyform.txt ~/Schreibtisch/anyform.desktop
+cp ~/install/desktop/code.txt ~/Schreibtisch/code.desktop
 cp ~/install/desktop/experiments.txt ~/Schreibtisch/experiments.desktop
-cp ~/install/desktop/react-multi-tree.txt ~/Schreibtisch/react-multi-tree.desktop
 cp ~/install/desktop/tensorboard.txt ~/Schreibtisch/tensorboard.desktop
 
 echo '\n - Publish to pip'

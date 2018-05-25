@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment=
 Terminal=false
-Name=react-multi-tree
-Exec=code /home/fru/Dokumente/GitHub/react-multi-tree/
+Name=Code
+Exec=code
 Type=Application
 Icon=/home/fru/install/icons/code.png
